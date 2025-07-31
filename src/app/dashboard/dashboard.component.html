@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<h2>Dashboard</h2>
+<p>
+  Es gibt aktuell <strong>{{ userCount }}</strong> User im System.<br>
+  <span *ngIf="lastUpdate">Letztes Update: {{ lastUpdate | date:'short' }}</span>
+</p>
+
+<h3>Letzte User</h3>
+<ul style="list-style: none; padding: 0;">
+  <li *ngFor="let user of lastUsers; let i = index" style="margin-bottom: 1em; border-bottom: 1px solid #eee; padding-bottom: 0.5em;">
+    <strong>User:</strong> {{ i + 1 }}<br>
+    <strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}<br>
+    <strong>Email:</strong> {{ user.email }}<br>
+    <strong>Stadt:</strong> {{ user.city }}
+  </li>
+</ul>
