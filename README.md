@@ -42,6 +42,6 @@ npm install
 ng serve
 ```
 ```bash
-Öffne dann [http://localhost:4200](http://localhost:4200) im Browser.
+Öffne dann http://localhost:4200 im Browser.
 ```
 
